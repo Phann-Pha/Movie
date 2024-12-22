@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Example Demo</string>
+
+
+
+
+    <string name="navigate_to">Navigate To</string>
+
+    <!-- sign in screen -->
+    <string name="sign_in">Sign In</string>
+    <string name="welcome_back_please_enter_nyour_details">Welcome back! please enter \nyour details.</string>
+</resources>

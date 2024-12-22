@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Base.Theme.ExampleDemo" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">@color/dark_color</item>
+    </style>
+</resources>
