@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:fontFamily="@font/poppin_mediu"
+            android:fontFamily="@font/popin_mediu"
             android:text="@string/sign_in"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/poppin_mediu"
+            android:fontFamily="@font/popin_mediu"
             android:text="Hi, Dear"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -50,6 +50,81 @@
             app:layout_constraintEnd_toEndOf="@id/txtHiDear"
             app:layout_constraintStart_toStartOf="@+id/txtHiDear"
             app:layout_constraintTop_toBottomOf="@+id/txtHiDear" />
+
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/edEmail" />
+
+        <ImageView
+            android:id="@+id/eyesVisibility"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_eyes_visibility"
+            app:layout_constraintBottom_toBottomOf="@id/edPassword"
+            app:layout_constraintEnd_toEndOf="@id/edPassword"
+            app:layout_constraintTop_toTopOf="@id/edPassword"
+            app:tint="@color/dark_gray" />
+
+        <TextView
+            android:id="@+id/txtForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Forget Password?"
+            android:textColor="@color/sky_color"
+            app:layout_constraintEnd_toEndOf="@id/edPassword"
+            app:layout_constraintTop_toBottomOf="@id/edPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Login"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtForgetPassword" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLeft"
