@@ -1,11 +1,13 @@
 package com.domain.demo.example
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.domain.demo.example.common.hideSoftKeyboard
 import com.domain.demo.example.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity()
@@ -27,6 +29,12 @@ class SignInActivity : AppCompatActivity()
         }
         
         onVisibilityPassword()
+        
+        binding.mainLayout.setOnClickListener {
+            hideSoftKeyboard()
+        }
+        
+        onNavToSignUpScreen()
     }
     
     private fun onValidateField()
@@ -65,6 +73,14 @@ class SignInActivity : AppCompatActivity()
                 binding.edPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 binding.eyesVisibility.setImageResource(R.drawable.ic_eyes_visibility)
             }
+        }
+    }
+    
+    private fun onNavToSignUpScreen()
+    {
+        binding.txtSignUp.setOnClickListener {
+            val intent = Intent(activity, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 }
