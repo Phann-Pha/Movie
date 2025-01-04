@@ -1,4 +1,4 @@
-package com.domain.demo.example
+package com.domain.demo.example.login.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.text.InputType
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.domain.demo.example.R
 import com.domain.demo.example.common.hideSoftKeyboard
 import com.domain.demo.example.databinding.ActivitySignInBinding
 

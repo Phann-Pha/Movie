@@ -1,10 +1,10 @@
-package com.domain.demo.example
+package com.domain.demo.example.login.ui
 
 import android.app.Activity
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.domain.demo.example.R
 import com.domain.demo.example.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity()
@@ -17,7 +17,6 @@ class SignUpActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         activity = this
         binding = DataBindingUtil.setContentView(activity, R.layout.activity_sign_up)
-        
         
     }
 }
