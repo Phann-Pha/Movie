@@ -21,15 +21,19 @@
             android:exported="false" />
 
         <activity
-            android:name=".login.ui.SignInActivity"
-            android:exported="true"
-            android:theme="@style/Base.Theme.ExampleDemo">
+            android:name=".onboard.ui.MainOnboardActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".login.ui.SignInActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.ExampleDemo" />
 
     </application>
 
