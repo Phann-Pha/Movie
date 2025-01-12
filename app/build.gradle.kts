@@ -49,4 +49,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    
+    // dots indicator library.
+    implementation("com.tbuonomo:dotsindicator:5.0")
 }
