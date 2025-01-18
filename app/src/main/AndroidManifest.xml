@@ -32,8 +32,12 @@
 
         <activity
             android:name=".login.ui.SignInActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Base.Theme.ExampleDemo" />
+
+        <activity android:name=".testRecyclerView.TestRecyclerViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
 
     </application>
 

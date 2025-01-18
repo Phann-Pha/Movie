@@ -15,6 +15,7 @@ import com.domain.demo.example.onboard.adapter.MainOnboardAdapter
 import com.domain.demo.example.onboard.ui.fragments.OnboardV1Fragment
 import com.domain.demo.example.onboard.ui.fragments.OnboardV2Fragment
 import com.domain.demo.example.onboard.ui.fragments.OnboardV3Fragment
+import com.domain.demo.example.testRecyclerView.TestRecyclerViewActivity
 
 class MainOnboardActivity : AppCompatActivity()
 {
@@ -80,7 +81,7 @@ class MainOnboardActivity : AppCompatActivity()
             
             if (currentOnboardPosition == 2)
             {
-                val intent = Intent(this@MainOnboardActivity, MainActivity::class.java)
+                val intent = Intent(this@MainOnboardActivity, TestRecyclerViewActivity::class.java)
                 startActivity(intent)
                 finish()
             } else
