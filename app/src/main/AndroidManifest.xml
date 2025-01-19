@@ -13,16 +13,13 @@
         android:theme="@style/Base.Theme.ExampleDemo"
         tools:targetApi="31">
         <activity
-            android:name=".login.ui.SignUpActivity"
+            android:name=".moduls.login.ui.SignUpActivity"
             android:exported="false" />
 
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".onboard.ui.MainOnboardActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +28,11 @@
         </activity>
 
         <activity
-            android:name=".login.ui.SignInActivity"
+            android:name=".moduls.onboard.ui.MainOnboardActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".moduls.login.ui.SignInActivity"
             android:exported="false"
             android:theme="@style/Base.Theme.ExampleDemo" />
 

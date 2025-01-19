@@ -1,4 +1,4 @@
-package com.domain.demo.example.onboard.ui
+package com.domain.demo.example.moduls.onboard.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,10 +11,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.domain.demo.example.MainActivity
 import com.domain.demo.example.R
 import com.domain.demo.example.databinding.ActivityMainOnboardBinding
-import com.domain.demo.example.onboard.adapter.MainOnboardAdapter
-import com.domain.demo.example.onboard.ui.fragments.OnboardV1Fragment
-import com.domain.demo.example.onboard.ui.fragments.OnboardV2Fragment
-import com.domain.demo.example.onboard.ui.fragments.OnboardV3Fragment
+import com.domain.demo.example.moduls.onboard.adapter.MainOnboardAdapter
+import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV1Fragment
+import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV2Fragment
+import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV3Fragment
 import com.domain.demo.example.testRecyclerView.TestRecyclerViewActivity
 
 class MainOnboardActivity : AppCompatActivity()

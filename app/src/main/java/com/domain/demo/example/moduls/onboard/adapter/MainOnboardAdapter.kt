@@ -1,4 +1,4 @@
-package com.domain.demo.example.onboard.adapter
+package com.domain.demo.example.moduls.onboard.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

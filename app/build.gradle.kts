@@ -52,4 +52,7 @@ dependencies {
     
     // dots indicator library.
     implementation("com.tbuonomo:dotsindicator:5.0")
+    
+    // smooth bottom navigation bar library.
+    implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7")
 }

@@ -1,4 +1,4 @@
-package com.domain.demo.example.login.ui
+package com.domain.demo.example.moduls.login.ui
 
 import android.app.Activity
 import android.os.Bundle

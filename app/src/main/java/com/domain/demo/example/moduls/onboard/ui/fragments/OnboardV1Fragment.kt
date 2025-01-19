@@ -1,4 +1,4 @@
-package com.domain.demo.example.onboard.ui.fragments
+package com.domain.demo.example.moduls.onboard.ui.fragments
 
 import androidx.fragment.app.Fragment
 import com.domain.demo.example.R
