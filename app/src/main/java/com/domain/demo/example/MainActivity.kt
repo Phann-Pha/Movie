@@ -27,13 +27,13 @@ class MainActivity : AppCompatActivity()
     
     private fun onInitBottomNavigationBar()
     {
-        onSetFragment(HomeFragment())
+        onSetFragment(HomeFragment(activity))
         binding.bottomNavigationBar.onItemSelected = { id ->
             when (id)
             {
                 0 ->
                 {
-                    onSetFragment(HomeFragment())
+                    onSetFragment(HomeFragment(activity))
                 }
                 
                 1 ->

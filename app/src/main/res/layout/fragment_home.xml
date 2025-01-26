@@ -2,14 +2,132 @@
 <layout>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/dark_color">
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/ProfileInfoViewGroup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Home Screen" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_profile"
+                app:shapeAppearanceOverlay="@style/CircleImage50" />
+
+            <LinearLayout
+                android:id="@+id/UserNameViewGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtGreetingUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Jonh"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Let’s stream your favorite movie"
+                    android:textColor="#92929D"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_btn_favorite"
+                android:padding="4dp"
+                android:src="@drawable/ic_round_favorite"
+                app:tint="#FB4141" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_filter_search"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ProfileInfoViewGroup">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_filter_search" />
+
+            <EditText
+                android:id="@+id/edSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toStartOf="@+id/filter"
+                android:layout_toEndOf="@id/btnSearch"
+                android:background="@null"
+                android:hint="Search a title..."
+                android:maxLength="400"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="#92929D"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1.5dp"
+                android:layout_height="20dp"
+                android:layout_alignEnd="@id/edSearch"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:background="#696974" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/filter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_filter"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

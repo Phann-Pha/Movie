@@ -1,6 +1,5 @@
 package com.domain.demo.example.moduls.onboard.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
@@ -8,14 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
-import com.domain.demo.example.MainActivity
 import com.domain.demo.example.R
 import com.domain.demo.example.databinding.ActivityMainOnboardBinding
 import com.domain.demo.example.moduls.onboard.adapter.MainOnboardAdapter
 import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV1Fragment
 import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV2Fragment
 import com.domain.demo.example.moduls.onboard.ui.fragments.OnboardV3Fragment
-import com.domain.demo.example.testRecyclerView.TestRecyclerViewActivity
 
 class MainOnboardActivity : AppCompatActivity()
 {
@@ -81,8 +78,6 @@ class MainOnboardActivity : AppCompatActivity()
             
             if (currentOnboardPosition == 2)
             {
-                val intent = Intent(this@MainOnboardActivity, TestRecyclerViewActivity::class.java)
-                startActivity(intent)
                 finish()
             } else
             {
