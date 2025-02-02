@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
         android:background="@color/dark_color">
 
+        <!--Profile Container-->
         <LinearLayout
             android:id="@+id/ProfileInfoViewGroup"
             android:layout_width="match_parent"
@@ -69,6 +70,7 @@
 
         </LinearLayout>
 
+        <!--Search Container-->
         <RelativeLayout
             android:id="@+id/searchViewGroup"
             android:layout_width="match_parent"
@@ -129,5 +131,52 @@
 
         </RelativeLayout>
 
+        <!--Carousel Container-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchViewGroup" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:dotsSize="14dp"
+            app:dotsSpacing="3dp"
+            app:layout_constraintEnd_toEndOf="@id/carousel"
+            app:layout_constraintStart_toStartOf="@id/carousel"
+            app:layout_constraintTop_toBottomOf="@id/carousel"
+            app:progressMode="true" />
+
+        <LinearLayout
+            android:id="@+id/categoryViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/indicator">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Categories"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
