@@ -55,4 +55,6 @@ dependencies {
     
     // smooth bottom navigation bar library.
     implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7")
+    
+    //implementation("com.github.bumptech.glide:glide:4.4.0")
 }

@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.domain.demo.example.R
 import com.domain.demo.example.databinding.ItemCarouselLayoutBinding
-import com.domain.demo.example.moduls.home.model.CarouselModel
+import com.domain.demo.example.moduls.home.domain.model.CarouselModel
 
 class CarouselAdapter(private val list: ArrayList<CarouselModel>) : RecyclerView.Adapter<CarouselAdapter.ViewHolder>()
 {

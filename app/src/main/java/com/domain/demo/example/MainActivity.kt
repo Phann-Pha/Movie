@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.domain.demo.example.databinding.ActivityMainBinding
 import com.domain.demo.example.moduls.download.DownloadFragment
-import com.domain.demo.example.moduls.home.HomeFragment
+import com.domain.demo.example.moduls.home.ui.HomeFragment
 import com.domain.demo.example.moduls.profile.ProfileFragment
 import com.domain.demo.example.moduls.search.SearchFragment
 

@@ -1,12 +1,10 @@
-package com.domain.demo.example.moduls.home
+package com.domain.demo.example.moduls.home.ui
 
-import android.animation.ObjectAnimator
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import android.view.animation.OvershootInterpolator
-import androidx.core.view.marginStart
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -15,42 +13,34 @@ import com.domain.demo.example.R
 import com.domain.demo.example.databinding.FragmentHomeBinding
 import com.domain.demo.example.moduls.home.adapter.CarouselAdapter
 import com.domain.demo.example.moduls.home.adapter.CategoryAdapter
-import com.domain.demo.example.moduls.home.model.CarouselModel
+import com.domain.demo.example.moduls.home.domain.model.CarouselModel
+import com.domain.demo.example.moduls.home.viewmodel.HomeViewModel
 import kotlin.math.abs
 
 class HomeFragment(private val activity: Activity) : Fragment(R.layout.fragment_home)
 {
     private lateinit var binding: FragmentHomeBinding
+    private lateinit var homeViewModel: HomeViewModel
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         
-        binding.btnFavorite.setOnClickListener {
-            val animator = ObjectAnimator.ofFloat(0.8f, 1f)
-            animator.apply {
-                duration = 500
-                interpolator = OvershootInterpolator()
-                addUpdateListener {
-                    binding.btnFavorite.scaleX = it.animatedValue as Float
-                    binding.btnFavorite.scaleY = it.animatedValue as Float
-                }
-                start()
-            }
-        }
-        
-        onInitCarouselAdapter()
+        onObserveViewModel()
         onInitCategoryAdapter()
     }
     
-    private fun onInitCarouselAdapter()
+    private fun onObserveViewModel()
     {
-        val list = arrayListOf(
-            CarouselModel("Black Panther: Wakanda Forever", "On March 2, 2022", R.drawable.carousel_1),
-            CarouselModel("Black Panther: Wakanda Forever", "On March 2, 2022", R.drawable.carousel_2),
-            CarouselModel("Black Panther: Wakanda Forever", "On March 2, 2022", R.drawable.carousel_1),
-        )
+        homeViewModel.onGetCarouselModel.observe(viewLifecycleOwner) { data ->
+            onInitCarouselAdapter(data)
+        }
+    }
+    
+    private fun onInitCarouselAdapter(list: ArrayList<CarouselModel>)
+    {
         val carouselAdapter = CarouselAdapter(list)
         binding.carousel.adapter = carouselAdapter
         
